@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List by Ritwik</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="todo-app">
+      <h2>To-Do List <span>📋</span></h2>
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Add your task">
+        <button onclick="addTask()">Add</button>
+      </div>
+      <div id="empty-message">Your to-do list is empty!</div>
+      <ul id="list-container"></ul>
+      <div id="task-counter"></div>
+    </div>
+  </div>
+  <div id="snackbar"></div>
+  <footer>
+    <p class="footer-note">Made by Ritwik</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

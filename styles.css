@@ -1,0 +1,142 @@
+body {
+  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-app {
+  background: #fff;
+  padding: 30px 25px 40px 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #0001;
+  width: 100%;
+  max-width: 400px;
+}
+.todo-app h2 {
+  color: #3f3f3f;
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.todo-app h2 span {
+  font-size: 1.3em;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+#input-box {
+  flex: 1;
+  outline: none;
+  padding: 12px;
+  border: 1px solid #cecece;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #74ebd5;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+button:hover {
+  background: #59c9e0;
+}
+#list-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#list-container li {
+  position: relative;
+  background: #f2f3f7;
+  margin-bottom: 10px;
+  padding: 11px 40px 11px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.18s;
+  user-select: none;
+  word-break: break-word;
+}
+#list-container li:hover {
+  background: #ddefff;
+}
+#list-container li.checked {
+  text-decoration: line-through;
+  color: #959595;
+  background: #e1f3ea;
+}
+#list-container li .close {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e57373;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.13s;
+}
+#list-container li .close:hover {
+  color: #c62828;
+}
+#empty-message {
+  text-align: center;
+  color: #999;
+  font-size: 1.08em;
+  margin: 20px 0px 5px 0px;
+  display: none;
+}
+#task-counter {
+  text-align: center;
+  color: #666;
+  font-size: 1em;
+  margin: 10px 0 0 0;
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 230px;
+  background-color: #323232;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 40px;
+  font-size: 1.05em;
+  transform: translateX(-50%);
+}
+#snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.7s 2.2s;
+}
+@keyframes fadein {
+  from {bottom: 0;opacity: 0;}
+  to {bottom: 40px;opacity: 1;}
+}
+@keyframes fadeout {
+  from {bottom: 40px;opacity: 1;}
+  to {bottom: 0;opacity: 0;}
+}
+.footer-note {
+  text-align: center;
+  color: #888;
+  margin: 20px auto 10px auto;
+  font-size: 0.96em;
+}
